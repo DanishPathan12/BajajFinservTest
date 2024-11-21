@@ -18,7 +18,7 @@ function App() {
       const parsedJson = JSON.parse(jsonInput);
       if (!parsedJson.data) throw new Error("Invalid JSON format");
 
-      const result = await axios.post("http://localhost:3000/bfhl", parsedJson);
+      const result = await axios.post("https://bajajfinservtest-iykt.onrender.com//bfhl", parsedJson);
       setResponse(result.data);
     } catch (err) {
       setError("Invalid JSON input or API error");
